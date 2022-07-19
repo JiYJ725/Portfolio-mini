@@ -4,7 +4,9 @@ import Button from "./components/Button";
 function App() {
   return (
     <div>
-      Start Project
+      프로젝트 환경설정 완료_지영준
+      <br></br>
+      <br></br>
       <Button label={"Basic Button"} />
     </div>
   );
