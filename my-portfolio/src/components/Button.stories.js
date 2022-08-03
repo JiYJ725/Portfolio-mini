@@ -11,4 +11,5 @@ export const BasicButton = Template.bind({});
 
 BasicButton.args = {
   label: "Basic Button",
+  size: "big"
 };

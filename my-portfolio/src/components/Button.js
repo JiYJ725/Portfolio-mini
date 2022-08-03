@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ButtonContainer = styled.button`
+const ButtonStyled = styled.button`
   font: inherit;
   font-weight: bold;
   padding: 0.5rem 1.5rem;
@@ -9,10 +9,12 @@ const ButtonContainer = styled.button`
   background: #002366;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.26);
   cursor: pointer;
+  width: ${({ size }) => (size === 'small' ? '48px' : '76px')};
 
   &:focus {
     outline: none;
   }
+
   &:hover,
   &:active {
     background: #4169e1;
@@ -21,8 +23,11 @@ const ButtonContainer = styled.button`
   }
 `;
 
-const Button = ({ label }) => {
-  return <ButtonContainer>{label}</ButtonContainer>;
-};
+const Button = (props) => {
+  const { label, onClick, disabled, size } = props;
+  return (
+    <ButtonStyled size={size} onClick={onClick} disabled={disabled}>{label}</ButtonStyled>
+  )
+}
 
 export default Button;
